@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head><meta charset="UTF-8"></head>
+  <body>
+    <template>
+      <style>
+#s01-root { position:absolute; inset:0; }
+#s01-root .stage { position:absolute; inset:0; }
+
+#s01-root .br { left:360px; top:110px; width:1200px; height:520px; overflow:hidden; }
+#s01-root .top { height:110px; display:flex; align-items:center; gap:12px; padding:0 30px; border-bottom:1.5px solid var(--line); }
+#s01-root .top i { display:block; width:16px; height:16px; border-radius:50%; background:#2b3632; }
+#s01-root .addr { margin-left:30px; width:800px; height:76px; border-radius:38px; background:#0e1311; border:1.5px solid var(--line);
+  display:flex; align-items:center; gap:16px; padding:0 26px; color:var(--muted); }
+#s01-root .addr .ic { width:30px; height:30px; flex:none; }
+#s01-root .addr .mono { color:var(--text); }
+#s01-root .sk { position:absolute; border-radius:16px; background:#18201d; }
+#s01-root .sk1 { left:48px; top:140px; width:1104px; height:170px; }
+#s01-root .sk2 { left:48px; top:340px; width:720px; height:30px; } #s01-root .sk3 { left:48px; top:395px; width:900px; height:30px; } #s01-root .sk4 { left:48px; top:450px; width:560px; height:30px; }
+#s01-root .chips { position:absolute; left:0; right:0; top:690px; display:flex; justify-content:center; gap:20px; }
+#s01-root .chip { padding:10px 26px; border-radius:18px; background:var(--panel); border:1.5px solid var(--line); color:var(--green); }
+#s01-root .q { position:absolute; left:0; right:0; top:830px; text-align:center; font-size:104px; }
+
+      </style>
+      <div data-hf-id="hf-qdxc" id="s01-root" data-composition-id="s01" data-width="1920" data-height="1080">
+        <div data-hf-id="hf-tan6" class="stage">
+
+<div data-hf-id="hf-cv3m" class="card br">
+  <div data-hf-id="hf-sijt" class="top"><i data-hf-id="hf-wt6k"></i><i data-hf-id="hf-zeb8"></i><i data-hf-id="hf-y7e5"></i><div data-hf-id="hf-hzi1" class="addr"><svg data-hf-id="hf-p3wx" class="ic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <rect data-hf-id="hf-9jn9" width="18" height="11" x="3" y="11" rx="2" ry="2" /> <path data-hf-id="hf-4qh8" d="M7 11V7a5 5 0 0 1 10 0v4" /> </svg> <span data-hf-id="hf-rg5s" class="mono"><span data-hf-id="hf-ol83" class="ch">e</span><span data-hf-id="hf-9sz8" class="ch">x</span><span data-hf-id="hf-mzzz" class="ch">a</span><span data-hf-id="hf-hcsr" class="ch">m</span><span data-hf-id="hf-czfg" class="ch">p</span><span data-hf-id="hf-hr3s" class="ch">l</span><span data-hf-id="hf-7x77" class="ch">e</span><span data-hf-id="hf-rivy" class="ch">.</span><span data-hf-id="hf-lhzo" class="ch">p</span><span data-hf-id="hf-yvyo" class="ch">l</span></span></div></div>
+  <div data-hf-id="hf-lv4h" class="sk sk1"></div><div data-hf-id="hf-s0ua" class="sk sk2"></div><div data-hf-id="hf-vyyb" class="sk sk3"></div><div data-hf-id="hf-8hgs" class="sk sk4"></div>
+</div>
+<div data-hf-id="hf-exrd" class="chips"><div data-hf-id="hf-my0y" class="chip mono">IP</div><div data-hf-id="hf-f5zi" class="chip mono">DNS</div><div data-hf-id="hf-mw80" class="chip mono">pakiety</div><div data-hf-id="hf-ajo3" class="chip mono">routing</div><div data-hf-id="hf-kcoe" class="chip mono">TCP</div><div data-hf-id="hf-hp6o" class="chip mono">TLS</div><div data-hf-id="hf-qkcr" class="chip mono">HTTP</div></div>
+<h1 data-hf-id="hf-iqe1" class="hd q">Co się dzieje po <span data-hf-id="hf-qx5a" class="g">Enter</span>?</h1>
+        </div>
+      </div>
+      <script>
+        (function () {
+          var R = "#s01-root ";
+          var $ = function (s) { return R + s; };
+          var V = function (w) { return w + 0.3; };
+          var E = "power3.out", IO = "power2.inOut";
+          var tl = gsap.timeline({ paused: true });
+          function type(sel, t, step) {
+            var els = document.querySelectorAll(R + sel + " .ch");
+            for (var i = 0; i < els.length; i++) tl.set(els[i], { display: "inline" }, t + i * (step || 0.045));
+          }
+          function draw(sel, t, d) {
+            tl.fromTo($(sel), { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d || 0.5, ease: "power2.out" }, t);
+          }
+          tl.fromTo($(".stage"), { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.5, ease: "power2.out" }, 0);
+
+tl.fromTo($(".br"), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, 0.1);
+type(".addr", V(0.3), 0.06);
+tl.fromTo($(".sk"), { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, ease: E, stagger: 0.1 }, V(2.0));
+tl.fromTo($(".chip"), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, ease: E, stagger: 0.12 }, V(3.9));
+tl.fromTo($(".q"), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, V(6.0));
+
+          tl.to($(".stage"), { opacity: 0, filter: "blur(6px)", y: -10, duration: 0.4, ease: "power2.inOut" }, 7.75);
+          window.__timelines["s01"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

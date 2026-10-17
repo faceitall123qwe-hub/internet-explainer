@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head><meta charset="UTF-8"></head>
+  <body>
+    <template>
+      <style>
+#s03-root { position:absolute; inset:0; }
+#s03-root .stage { position:absolute; inset:0; }
+#s03-root .hd { position:absolute; left:140px; top:96px; }
+#s03-root .sub { position:absolute; left:144px; top:226px; color:var(--muted); }
+#s03-root .nm, #s03-root .an { left:140px; width:620px; height:140px; display:flex; align-items:center; justify-content:center; font-size:60px; }
+#s03-root .nm { top:400px; } #s03-root .an { top:640px; color:var(--green); border-color:rgba(62,224,143,.6); }
+#s03-root .sv { left:1000px; width:780px; height:130px; display:flex; align-items:center; justify-content:space-between; padding:0 40px; }
+#s03-root .sv0 { top:330px; }
+#s03-root .sv1 { top:500px; }
+#s03-root .sv2 { top:670px; }
+#s03-root .wire .wa { stroke:var(--green); }
+
+      </style>
+      <div data-hf-id="hf-4ups" id="s03-root" data-composition-id="s03" data-width="1920" data-height="1080">
+        <div data-hf-id="hf-tan6" class="stage">
+
+<h1 data-hf-id="hf-aymx" class="hd">DNS zamienia <span data-hf-id="hf-a1pd" class="g">nazwę na numer</span></h1>
+<div data-hf-id="hf-5cay" class="sub lb">książka telefoniczna internetu</div>
+<svg data-hf-id="hf-dimw" class="wire" viewBox="0 0 1920 1080">
+  <path data-hf-id="hf-59sp" class="w0" pathLength="1" d="M760 470 C 880 470, 880 395, 1000 395" /><path data-hf-id="hf-1pee" class="w1" pathLength="1" d="M760 470 C 880 470, 880 565, 1000 565" /><path data-hf-id="hf-pqbb" class="w2" pathLength="1" d="M760 470 C 880 470, 880 735, 1000 735" />
+  <path data-hf-id="hf-4lpy" class="wa" pathLength="1" d="M1000 735 C 880 735, 880 710, 760 710" />
+</svg>
+<div data-hf-id="hf-wb7m" class="card nm mono">example.pl</div>
+<div data-hf-id="hf-m71g" class="card sv sv0"><span data-hf-id="hf-8rqb" class="lb">serwer główny</span><span data-hf-id="hf-wl7h" class="mono y">.</span></div>
+<div data-hf-id="hf-iwq5" class="card sv sv1"><span data-hf-id="hf-9k87" class="lb">serwer domeny</span><span data-hf-id="hf-oti9" class="mono y">.pl</span></div>
+<div data-hf-id="hf-muu6" class="card sv sv2"><span data-hf-id="hf-ulzs" class="lb">serwer strony</span><span data-hf-id="hf-05gd" class="mono y">example.pl</span></div>
+<div data-hf-id="hf-vbu7" class="card an mono">203.0.113.7</div>
+        </div>
+      </div>
+      <script>
+        (function () {
+          var R = "#s03-root ";
+          var $ = function (s) { return R + s; };
+          var V = function (w) { return w + 0.3; };
+          var E = "power3.out", IO = "power2.inOut";
+          var tl = gsap.timeline({ paused: true });
+          function type(sel, t, step) {
+            var els = document.querySelectorAll(R + sel + " .ch");
+            for (var i = 0; i < els.length; i++) tl.set(els[i], { display: "inline" }, t + i * (step || 0.045));
+          }
+          function draw(sel, t, d) {
+            tl.fromTo($(sel), { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d || 0.5, ease: "power2.out" }, t);
+          }
+          tl.fromTo($(".stage"), { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.5, ease: "power2.out" }, 0);
+tl.fromTo($(".hd"), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, 0.2);
+tl.fromTo($(".nm"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, V(0.6));
+tl.fromTo($(".sub"), { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, V(4.8));
+tl.fromTo($(".sv"), { opacity: 0, x: 24 }, { opacity: 0.45, x: 0, duration: 0.6, ease: E, stagger: 0.12 }, V(7.2));
+draw(".w0", V(8.57) - 0.3, 0.45);
+tl.to($(".sv0"), { opacity: 1, borderColor: "rgba(62,224,143,.6)", duration: 0.4, ease: "power2.out" }, V(8.57));
+draw(".w1", V(9.54) - 0.3, 0.45);
+tl.to($(".sv1"), { opacity: 1, borderColor: "rgba(62,224,143,.6)", duration: 0.4, ease: "power2.out" }, V(9.54));
+draw(".w2", V(10.67) - 0.3, 0.45);
+tl.to($(".sv2"), { opacity: 1, borderColor: "rgba(62,224,143,.6)", duration: 0.4, ease: "power2.out" }, V(10.67));
+draw(".wa", V(11.1), 0.5);
+tl.fromTo($(".an"), { opacity: 0, scale: 0.96 }, { opacity: 1, scale: 1, duration: 0.6, ease: E }, V(11.4));
+
+          tl.to($(".stage"), { opacity: 0, filter: "blur(6px)", y: -10, duration: 0.4, ease: "power2.inOut" }, 12.45);
+          window.__timelines["s03"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

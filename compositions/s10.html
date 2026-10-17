@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head><meta charset="UTF-8"></head>
+  <body>
+    <template>
+      <style>
+#s10-root { position:absolute; inset:0; }
+#s10-root .stage { position:absolute; inset:0; }
+
+#s10-root .ls { position:absolute; inset:0; }
+#s10-root .row { position:absolute; left:140px; right:140px; top:240px; display:flex; flex-wrap:wrap; gap:26px 22px; }
+#s10-root .sc { padding:18px 36px; border-radius:22px; background:var(--panel); border:1.5px solid var(--line); font-size:60px; color:var(--green); }
+#s10-root .ft { position:absolute; left:140px; top:620px; font-size:108px; }
+#s10-root .fin { position:absolute; inset:0; }
+#s10-root .gl { position:absolute; left:900px; top:150px; width:120px; height:120px; color:var(--green); }
+#s10-root .gl .ic { width:120px; height:120px; stroke-width:1.2; }
+#s10-root .fh { position:absolute; left:0; right:0; top:330px; text-align:center; font-size:104px; }
+#s10-root .cmd { position:absolute; left:500px; top:530px; width:920px; height:116px; border-radius:24px; background:var(--panel); border:1.5px solid var(--line);
+  display:flex; align-items:center; padding:0 44px; font-size:56px; }
+#s10-root .fn { position:absolute; left:0; right:0; top:700px; text-align:center; color:var(--muted); }
+
+      </style>
+      <div data-hf-id="hf-9fh8" id="s10-root" data-composition-id="s10" data-width="1920" data-height="1080">
+        <div data-hf-id="hf-tan6" class="stage">
+
+<div data-hf-id="hf-x72n" class="ls">
+  <div data-hf-id="hf-thy4" class="row"><div data-hf-id="hf-xh2c" class="sc sc0 mono">IP</div><div data-hf-id="hf-wj9x" class="sc sc1 mono">DNS</div><div data-hf-id="hf-hv8k" class="sc sc2 mono">pakiety</div><div data-hf-id="hf-fklu" class="sc sc3 mono">routing</div><div data-hf-id="hf-ex6c" class="sc sc4 mono">TCP</div><div data-hf-id="hf-zrq5" class="sc sc5 mono">szyfrowanie</div><div data-hf-id="hf-jyub" class="sc sc6 mono">HTTP</div></div>
+  <h1 data-hf-id="hf-vgq7" class="hd ft">Tak działa <span data-hf-id="hf-ld7p" class="g">internet</span>.</h1>
+</div>
+<div data-hf-id="hf-ts4n" class="fin">
+  <div data-hf-id="hf-mtfl" class="gl"><svg data-hf-id="hf-p3wx" class="ic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <circle data-hf-id="hf-m1lh" cx="12" cy="12" r="10" /> <path data-hf-id="hf-g44y" d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" /> <path data-hf-id="hf-0zqy" d="M2 12h20" /> </svg> </div>
+  <h1 data-hf-id="hf-gdy1" class="hd fh">Sprawdź <span data-hf-id="hf-khsn" class="g">sam</span></h1>
+  <div data-hf-id="hf-f805" class="cmd mono"><span data-hf-id="hf-l43o" class="g">$</span>&#160;<span data-hf-id="hf-gyhq" class="ch">n</span><span data-hf-id="hf-bsid" class="ch">s</span><span data-hf-id="hf-hr3s" class="ch">l</span><span data-hf-id="hf-gk6p" class="ch">o</span><span data-hf-id="hf-raqt" class="ch">o</span><span data-hf-id="hf-eyyl" class="ch">k</span><span data-hf-id="hf-e6cj" class="ch">u</span><span data-hf-id="hf-czfg" class="ch">p</span><span data-hf-id="hf-5eis" class="ch">&#160;</span><span data-hf-id="hf-ol83" class="ch">e</span><span data-hf-id="hf-9sz8" class="ch">x</span><span data-hf-id="hf-mzzz" class="ch">a</span><span data-hf-id="hf-hcsr" class="ch">m</span><span data-hf-id="hf-lhzo" class="ch">p</span><span data-hf-id="hf-yvyo" class="ch">l</span><span data-hf-id="hf-7x77" class="ch">e</span><span data-hf-id="hf-rivy" class="ch">.</span><span data-hf-id="hf-kb2l" class="ch">p</span><span data-hf-id="hf-xp1l" class="ch">l</span></div>
+  <div data-hf-id="hf-h1dj" class="fn lb">pokaże adres IP strony</div>
+</div>
+        </div>
+      </div>
+      <script>
+        (function () {
+          var R = "#s10-root ";
+          var $ = function (s) { return R + s; };
+          var V = function (w) { return w + 0.3; };
+          var E = "power3.out", IO = "power2.inOut";
+          var tl = gsap.timeline({ paused: true });
+          function type(sel, t, step) {
+            var els = document.querySelectorAll(R + sel + " .ch");
+            for (var i = 0; i < els.length; i++) tl.set(els[i], { display: "inline" }, t + i * (step || 0.045));
+          }
+          function draw(sel, t, d) {
+            tl.fromTo($(sel), { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d || 0.5, ease: "power2.out" }, t);
+          }
+          tl.fromTo($(".stage"), { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.5, ease: "power2.out" }, 0);
+
+tl.fromTo($(".sc0"), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, ease: E }, V(0.1));
+tl.fromTo($(".sc1"), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, ease: E }, V(0.97));
+tl.fromTo($(".sc2"), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, ease: E }, V(1.99));
+tl.fromTo($(".sc3"), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, ease: E }, V(2.79));
+tl.fromTo($(".sc4"), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, ease: E }, V(3.42));
+tl.fromTo($(".sc5"), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, ease: E }, V(4.45));
+tl.fromTo($(".sc6"), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, ease: E }, V(5.01));
+tl.fromTo($(".ft"), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, V(6.7));
+tl.to($(".ls"), { opacity: 0, filter: "blur(8px)", duration: 0.5, ease: "power2.inOut" }, V(8.3));
+tl.fromTo($(".gl"), { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.7, ease: E }, V(8.7));
+tl.fromTo($(".fh"), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, V(8.85));
+tl.fromTo($(".cmd"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, V(9.6));
+type(".cmd", V(10.6), 0.05);
+tl.fromTo($(".fn"), { opacity: 0 }, { opacity: 1, duration: 0.6 }, V(11.9));
+
+          tl.to($(".stage"), { opacity: 0, filter: "blur(6px)", y: -10, duration: 0.85, ease: "power2.inOut" }, 14.00);
+          window.__timelines["s10"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

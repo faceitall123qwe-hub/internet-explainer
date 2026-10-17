@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head><meta charset="UTF-8"></head>
+  <body>
+    <template>
+      <style>
+#s08-root { position:absolute; inset:0; }
+#s08-root .stage { position:absolute; inset:0; }
+#s08-root .hd { position:absolute; left:140px; top:96px; }
+#s08-root .t0 { left:140px; top:280px; width:760px; height:380px; } #s08-root .t1 { left:1020px; top:280px; width:760px; height:380px; }
+#s08-root .verb { color:var(--yellow); }
+#s08-root .st200 { color:var(--green); display:inline-block; }
+#s08-root .r { opacity:0; }
+#s08-root .wire .ar { stroke:var(--green); }
+#s08-root .wire .ah { fill:var(--green); }
+#s08-root .cap { position:absolute; left:0; right:0; top:760px; text-align:center; color:var(--muted); }
+
+      </style>
+      <div data-hf-id="hf-tdq0" id="s08-root" data-composition-id="s08" data-width="1920" data-height="1080">
+        <div data-hf-id="hf-tan6" class="stage">
+
+<h1 data-hf-id="hf-yzud" class="hd"><span data-hf-id="hf-lauw" class="g">HTTP</span>: prośba i odpowiedź</h1>
+<div data-hf-id="hf-9spq" class="term t0"><div data-hf-id="hf-ufsv" class="bar"><i data-hf-id="hf-wt6k"></i><i data-hf-id="hf-zeb8"></i><i data-hf-id="hf-y7e5"></i><span data-hf-id="hf-f88r" class="mono muted">żądanie</span></div>
+  <div data-hf-id="hf-2t3w" class="body"><div data-hf-id="hf-f65e" class="mono l1"><span data-hf-id="hf-yf5e" class="verb"><span data-hf-id="hf-0iex" class="ch">G</span><span data-hf-id="hf-1b0z" class="ch">E</span><span data-hf-id="hf-vcfk" class="ch">T</span></span><span data-hf-id="hf-5eis" class="ch">&#160;</span><span data-hf-id="hf-r4kx" class="ch">/</span><span data-hf-id="hf-6zuk" class="ch">&#160;</span><span data-hf-id="hf-wxno" class="ch">H</span><span data-hf-id="hf-3h54" class="ch">T</span><span data-hf-id="hf-2a81" class="ch">T</span><span data-hf-id="hf-tr7g" class="ch">P</span><span data-hf-id="hf-exut" class="ch">/</span><span data-hf-id="hf-n5in" class="ch">1</span><span data-hf-id="hf-rivy" class="ch">.</span><span data-hf-id="hf-w5vz" class="ch">1</span></div><div data-hf-id="hf-b81d" class="mono l2"><span data-hf-id="hf-akgs" class="ch">H</span><span data-hf-id="hf-gk6p" class="ch">o</span><span data-hf-id="hf-bsid" class="ch">s</span><span data-hf-id="hf-eknk" class="ch">t</span><span data-hf-id="hf-jkre" class="ch">:</span><span data-hf-id="hf-5sxh" class="ch">&#160;</span><span data-hf-id="hf-ol83" class="ch">e</span><span data-hf-id="hf-9sz8" class="ch">x</span><span data-hf-id="hf-mzzz" class="ch">a</span><span data-hf-id="hf-hcsr" class="ch">m</span><span data-hf-id="hf-czfg" class="ch">p</span><span data-hf-id="hf-hr3s" class="ch">l</span><span data-hf-id="hf-7x77" class="ch">e</span><span data-hf-id="hf-6ude" class="ch">.</span><span data-hf-id="hf-lhzo" class="ch">p</span><span data-hf-id="hf-yvyo" class="ch">l</span></div></div></div>
+<svg data-hf-id="hf-dimw" class="wire" viewBox="0 0 1920 1080"><path data-hf-id="hf-0gxb" class="ar" pathLength="1" d="M910 470 L1000 470" /><polygon data-hf-id="hf-q3cx" class="ah" points="1010,470 994,460 994,480" /></svg>
+<div data-hf-id="hf-dqtr" class="term t1"><div data-hf-id="hf-c51b" class="bar"><i data-hf-id="hf-ylp6"></i><i data-hf-id="hf-0l8b"></i><i data-hf-id="hf-0zjc"></i><span data-hf-id="hf-ict4" class="mono muted">odpowiedź</span></div>
+  <div data-hf-id="hf-6g9g" class="body">
+    <div data-hf-id="hf-etqb" class="mono r r1">HTTP/1.1 <span data-hf-id="hf-w14a" class="st200">200 OK</span></div>
+    <div data-hf-id="hf-t9fz" class="mono r r2 muted">Content-Type: text/html</div>
+    <div data-hf-id="hf-0hgk" class="mono r r3">&lt;!doctype html&gt;…</div>
+  </div></div>
+<div data-hf-id="hf-qx0a" class="cap lb">200 = OK · 404 = nie znaleziono</div>
+        </div>
+      </div>
+      <script>
+        (function () {
+          var R = "#s08-root ";
+          var $ = function (s) { return R + s; };
+          var V = function (w) { return w + 0.3; };
+          var E = "power3.out", IO = "power2.inOut";
+          var tl = gsap.timeline({ paused: true });
+          function type(sel, t, step) {
+            var els = document.querySelectorAll(R + sel + " .ch");
+            for (var i = 0; i < els.length; i++) tl.set(els[i], { display: "inline" }, t + i * (step || 0.045));
+          }
+          function draw(sel, t, d) {
+            tl.fromTo($(sel), { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d || 0.5, ease: "power2.out" }, t);
+          }
+          tl.fromTo($(".stage"), { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.5, ease: "power2.out" }, 0);
+tl.fromTo($(".hd"), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, 0.2);
+tl.fromTo($(".t0"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, V(0.2));
+type(".l1", V(1.1), 0.05);
+type(".l2", V(1.8), 0.045);
+tl.fromTo($(".verb"), { opacity: 1 }, { opacity: 0.4, duration: 0.2, yoyo: true, repeat: 1 }, V(2.9));
+draw(".ar", V(4.0), 0.4);
+tl.fromTo($(".ah"), { opacity: 0 }, { opacity: 1, duration: 0.2 }, V(4.35));
+tl.fromTo($(".t1"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, V(4.6));
+tl.fromTo($(".r1"), { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.4, ease: E }, V(5.8));
+tl.fromTo($(".st200"), { scale: 1 }, { scale: 1.12, duration: 0.25, ease: "power2.out", yoyo: true, repeat: 1 }, V(6.1));
+tl.fromTo($(".cap"), { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, ease: E }, V(6.8));
+tl.fromTo($(".r2"), { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.4, ease: E }, V(7.5));
+tl.fromTo($(".r3"), { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.4, ease: E }, V(7.85));
+
+          tl.to($(".stage"), { opacity: 0, filter: "blur(6px)", y: -10, duration: 0.4, ease: "power2.inOut" }, 9.55);
+          window.__timelines["s08"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>
